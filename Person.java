@@ -47,7 +47,7 @@ public class Person {
         }
     }
 
-    public Person deserialize(String fileAddress) {
+    public static Person deserialize(String fileAddress) {
         Person person = null;
         try {
             Scanner fileInput = new Scanner(new FileInputStream(fileAddress));
@@ -56,8 +56,8 @@ public class Person {
             String [] line = inputLine.split(",");
             String nameX = inputLine.substring(0, inputLine.indexOf(','));
             String ageX = inputLine.substring(inputLine.indexOf(',') + 1);
-            setName(nameX);
-            setBirthYear(ageX);
+            person.setName(nameX);
+            person.setBirthYear(ageX);
             person = new Person(line[0], line[1]);
         }
         catch (Exception e) {
