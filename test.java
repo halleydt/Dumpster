@@ -1,6 +1,6 @@
 import java.io.*;
 import java.nio.*;
-public class main {
+public class test {
     public static void main (String [] args) {
         Person guy = new Person("Jimmy John", "1999");
         guy.serialize(guy,"bigFile.txt");
